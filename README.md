@@ -1,4 +1,5 @@
 # covid info ph
+Preview link : [https://covid-info-ph.netlify.app](https://covid-info-ph.netlify.app)
 
 ## Build Setup
 
