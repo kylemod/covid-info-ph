@@ -3,9 +3,9 @@ Preview link : [https://covid-info-ph.netlify.app](https://covid-info-ph.netlify
 
 ## Build Setup
 
-// Clone this repository
-
 ```bash
+# clone this repository
+
 # install dependencies // use yarn (required)
 $ yarn
 
