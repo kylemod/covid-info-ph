@@ -1,20 +1,18 @@
-# nuxt-tailwind-template
+# covid info ph
 
 ## Build Setup
 
 ```bash
-# install dependencies
-$ npm install
+# install dependencies // use yarn (required)
+$ yarn
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ yarn dev
 
 # build for production and launch server
-$ npm run build
-$ npm run start
+$ yarn generate
+$ yarn start
 
-# generate static project
-$ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
