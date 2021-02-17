@@ -74,7 +74,7 @@ export default defineComponent({
     
     const fetchData = (async () => {
        fetch.state = await true
-       await root.$axios.$get('https://corona.lmao.ninja/v2/countries/Philippines')
+       await root.$axios.$get('https://corona.lmao.ninja/v2/countries/philippines')
          .then(async res => {
            await root.$store.commit('setPhData', res)
            ph.value = await root.$store.getters.getPhData
