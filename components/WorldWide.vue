@@ -10,50 +10,50 @@
       <h1 class="text-md font-semibold">Coronavirus Cases - <span class="text-gray-400 font-medium dark:text-gray-300">Worldwide</span></h1>
       <div class="mt-4 mb-8">
         <p class="uppercase text-xs font-medium text-gray-400">Total Confirmed Cases</p>
-        <p class="font-bold text-gray-600 text-2xl mt-1 dark:text-gray-300">{{ world.cases }}</p>
+        <p class="font-bold text-gray-600 text-2xl mt-1 dark:text-gray-300">{{ world.data.cases | numeral('0,0') }}</p>
       </div>
       <div>
           <span class="inline-block w-3 h-3 mr-2 bg-indigo-500 rounded"></span>
           <p class="text-sm inline-block">Active Cases</p>
-          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.active }}</p>
+          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.data.active | numeral('0,0') }}</p>
       </div>
       <div class="mt-1">
           <span class="inline-block w-3 h-3 mr-2 bg-indigo-500 rounded"></span>
           <p class="text-sm inline-block">Cases Today</p>
-          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.todayCases }}</p>
+          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.data.todayCases | numeral('0,0') }}</p>
       </div>
       <div class="mt-1">
           <span class="inline-block w-3 h-3 mr-2 bg-green-300 rounded"></span>
           <p class="text-sm inline-block">Recovered</p>
-          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.recovered }}</p>
+          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.data.recovered | numeral('0,0') }}</p>
       </div>
       <div class="mt-1">
           <span class="inline-block w-3 h-3 mr-2 bg-green-300 rounded"></span>
           <p class="text-sm inline-block">Recovered Today</p>
-          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.todayRecovered }}</p>
+          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.data.todayRecovered | numeral('0,0') }}</p>
       </div>
       <div class="mt-1">
           <span class="inline-block w-3 h-3 mr-2 bg-yellow-500 rounded"></span>
           <p class="text-sm inline-block">Critical or Serious</p>
-          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.critical }}</p>
+          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.data.critical | numeral('0,0') }}</p>
       </div>
       <div class="mt-1">
           <span class="inline-block w-3 h-3 mr-2 bg-red-500 rounded"></span>
           <p class="text-sm inline-block">Deaths</p>
-          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.deaths }}</p>
+          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.data.deaths | numeral('0,0') }}</p>
       </div>
       <div class="mt-1">
           <span class="inline-block w-3 h-3 mr-2 bg-red-500 rounded"></span>
           <p class="text-sm inline-block">Deaths Today</p>
-          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.todayDeaths }}</p>
+          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.data.todayDeaths | numeral('0,0') }}</p>
       </div>
       <div class="mt-1">
           <span class="inline-block w-3 h-3 mr-2 bg-gray-400 rounded"></span>
           <p class="text-sm inline-block">Total swab tests</p>
-          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.tests }}</p>
+          <p class="float-right inline-block text-sm font-medium dark:text-gray-300">{{ world.data.tests | numeral('0,0') }}</p>
       </div>
       <div class="mt-6">
-        <p class="text-xs font-medium text-gray-400 italic dark:text-gray-500">Updated on : {{ new Date(world.updated) }}</p>
+        <p class="text-xs font-medium text-gray-400 italic dark:text-gray-500">Updated on : {{ new Date(world.data.updated) }}</p>
       </div>
     </div>
   </div>

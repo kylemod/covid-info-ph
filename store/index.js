@@ -3,7 +3,8 @@ const numeral = require("numeral")
 export const state = () => ({
   refresh: false,
   world: [],
-  ph: []
+  ph: [],
+  countries: []
 })
 
 export const mutations = {
@@ -15,6 +16,9 @@ export const mutations = {
   },
   setPhData(state, data) {
     state.ph = data
+  },
+  setCountriesData(state, data) {
+    state.countries = data
   }
 }
 
@@ -24,30 +28,13 @@ export const getters = {
   },
   getWorldData(state) {
     let data = state.world
-    let active = numeral(data.active).format(0,0)
-    let cases = numeral(data.cases).format(0,0)
-    let critical = numeral(data.critical).format(0,0)
-    let deaths = numeral(data.deaths).format(0,0)
-    let recovered = numeral(data.recovered).format(0,0)
-    let tests = numeral(data.tests).format(0,0)
-    let todayCases = numeral(data.todayCases).format(0,0)
-    let todayDeaths = numeral(data.todayDeaths).format(0,0)
-    let todayRecovered = numeral(data.todayRecovered).format(0,0)
-    let updated = data.updated
-    return { active, cases, critical, deaths, recovered, tests, todayCases, todayDeaths, todayRecovered, updated } 
+    return { data } 
   },
   getPhData(state) {
     let data = state.ph
-    let active = numeral(data.active).format(0,0)
-    let cases = numeral(data.cases).format(0,0)
-    let critical = numeral(data.critical).format(0,0)
-    let deaths = numeral(data.deaths).format(0,0)
-    let recovered = numeral(data.recovered).format(0,0)
-    let tests = numeral(data.tests).format(0,0)
-    let todayCases = numeral(data.todayCases).format(0,0)
-    let todayDeaths = numeral(data.todayDeaths).format(0,0)
-    let todayRecovered = numeral(data.todayRecovered).format(0,0)
-    let updated = data.updated
-    return { active, cases, critical, deaths, recovered, tests, todayCases, todayDeaths, todayRecovered, updated } 
+    return { data }
+  },
+  getCountriesData(state) {
+    return state.countries
   }
 }

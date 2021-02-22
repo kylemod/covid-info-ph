@@ -5501,7 +5501,7 @@ num2fraction@^1.2.2:
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=
 
-numeral@^2.0.6:
+numeral@>=2, numeral@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/numeral/-/numeral-2.0.6.tgz#4ad080936d443c2561aed9f2197efffe25f4e506"
   integrity sha1-StCAk21EPCVhrtnyGX7//iX05QY=
@@ -8197,6 +8197,13 @@ vue-no-ssr@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/vue-no-ssr/-/vue-no-ssr-1.1.1.tgz#875f3be6fb0ae41568a837f3ac1a80eaa137b998"
   integrity sha512-ZMjqRpWabMPqPc7gIrG0Nw6vRf1+itwf0Itft7LbMXs2g3Zs/NFmevjZGN1x7K3Q95GmIjWbQZTVerxiBxI+0g==
+
+vue-numeral-filter@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vue-numeral-filter/-/vue-numeral-filter-2.0.0.tgz#a28f4f795d66c8555fb521498ed846418150fa5e"
+  integrity sha512-7k9ALqulfOWbxRFKOR04EPWAxk95FHOeO1uIDn1x8n5+ODmE8DdU2STQ+AO2WFXdf1VNQvZPwQRE7hNOLQQY+Q==
+  dependencies:
+    numeral "^2.0.6"
 
 vue-router@^3.4.9:
   version "3.5.1"

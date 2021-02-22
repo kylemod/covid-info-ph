@@ -12,7 +12,7 @@
               <div class="ml-10 flex items-baseline space-x-4">
                 <nuxt-link to="/" class="text-gray-800 hover:text-purple block px-3 py-2 rounded-md text-sm dark:text-gray-300 dark:hover:text-purple-400">Overview</nuxt-link>
 
-                <nuxt-link to="/philippines" class="text-gray-800 hover:text-purple block px-3 py-2 rounded-md text-sm dark:text-gray-300 dark:hover:text-purple-400">Philippines</nuxt-link>
+                <nuxt-link to="/countries" class="text-gray-800 hover:text-purple block px-3 py-2 rounded-md text-sm dark:text-gray-300 dark:hover:text-purple-400">Countries</nuxt-link>
 
                 <nuxt-link to="/visual-data" class="text-gray-800 hover:text-purple block px-3 py-2 rounded-md text-sm dark:text-gray-300 dark:hover:text-purple-400">Visual Data</nuxt-link>
 
@@ -53,13 +53,13 @@
         <span class="text-gray-700 text-md uppercase ml-4 font-medium dark:text-gray-500">Links</span>
         <div class="px-4 pt-2 pb-3 space-y-1 sm:px-3">
           <client-only>
-            <span @click="close">
+            <span @click="menu = !menu">
               <nuxt-link to="/" class="text-gray-800 hover:text-purple block px-3 py-2 rounded-md text-sm dark:text-gray-300 dark:hover:text-purple-400">Overview</nuxt-link>
             </span>
-            <span @click="close">
-              <nuxt-link to="/philippines" class="text-gray-800 hover:text-purple block px-3 py-2 rounded-md text-sm dark:text-gray-300 dark:hover:text-purple-400">Philippines</nuxt-link>
+            <span @click="menu = !menu">
+              <nuxt-link to="/countries" class="text-gray-800 hover:text-purple block px-3 py-2 rounded-md text-sm dark:text-gray-300 dark:hover:text-purple-400">Countries</nuxt-link>
             </span>
-            <span @click="close">
+            <span @click="menu = !menu">
               <nuxt-link to="/visual-data" class="text-gray-800 hover:text-purple block px-3 py-2 rounded-md text-sm dark:text-gray-300 dark:hover:text-purple-400">Visual Data</nuxt-link>
             </span>
           </client-only>
@@ -124,10 +124,6 @@ export default defineComponent({
       body.class = 'bg-gray-900'
     }
     
-    let close = () => {
-      setTimeout(() => menu.value = false , 200)
-    }
-    
     onMounted(() => {
       if(localStorage.getItem("nuxt-color-mode") == "dark") {
         mode.dark = true
@@ -156,7 +152,7 @@ export default defineComponent({
       }
     }))
     
-  return { menu, mode, toggleLight, toggleDark, body, close }
+  return { menu, mode, toggleLight, toggleDark, body }
   }
 })
 </script>
@@ -169,6 +165,6 @@ export default defineComponent({
     border-top-width: 1px;
   }
   .nav-active {
-    @apply text-white bg-purple-500 dark:bg-opacity-25 dark:text-white;
+    @apply text-white bg-purple-500 dark:bg-opacity-25;
   }
 </style>

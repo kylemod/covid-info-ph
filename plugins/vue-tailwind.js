@@ -72,7 +72,7 @@ const settings = {
         leaveToClass: '',
       }
     }
-  }
+  },
 }
 
 Vue.use(VueTailwind, settings)

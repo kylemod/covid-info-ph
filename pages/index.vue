@@ -6,7 +6,7 @@
       </div>
       <div class="md:w-1/2">
         <client-only>
-          <countdown v-if="count" :time="300 * 1000" @end="refresh" class="md:float-right">
+          <countdown v-if="count" :time="300 * 1000" @end="refresh" class="md:float-right lg:float-left">
             <template slot-scope="props">Data will automatically refresh after <span class="font-medium dark:text-gray-300">{{ props.minutes }} minutes and {{ props.seconds }} seconds</span></template>
         </countdown>
           <div class="mt-2 md:mt-0 md:float-right">
