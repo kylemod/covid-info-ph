@@ -12,11 +12,6 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
-    script: [
-      { src: 'eruda/eruda.js' },
-      { src: 'eruda-dom/eruda-dom.js' },
-      { src: 'eruda.init.js' },
     ]
   },
 
